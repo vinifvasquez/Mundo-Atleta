@@ -1,0 +1,447 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 8vh;}
+    
+    .nav-list {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-list li {
+        letter-spacing: 3px;
+        margin-left: 40px;
+      }
+      
+     
+    body {
+        background-color:#2a9ecc;
+        font-family:'Lato',Helvetica,Arial;
+        font-size:15px;
+    
+        margin:0;
+        min-height:100vh;
+       
+    }
+    
+    .models {
+        display:none;
+    }
+    
+    header {
+        position: fixed;
+        left:0;
+        top:0;
+        right:0;
+        height:60px;
+        background-color:#891bd3;
+        display:none;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .menu-openner {
+        margin-right: 15px;
+        font-size: 26px;
+        background-color: #2798e4;
+        padding: 5px 20px;
+        border-radius: 5px;
+    }
+    
+    .menu-openner span {
+        margin-right:10px;
+    }
+    
+    .menu-closer {
+        width:32px;
+        height:32px;
+        display:none;
+        font-size: 30px;
+    }
+    
+    aside {
+        background-color:#5ed8fd;
+        width:0vw;
+        font-family:'Hepta Slab', Helvetica, Arial;
+        transition:all ease .2s;
+        overflow-x:hidden;
+    }
+    
+    aside.show {
+        width:30vw;
+        
+    }
+    
+    .cart--area {
+        padding:20px;
+        right: 1000px;
+   
+       
+    }
+    
+    main {
+        flex:0;
+        padding:0px;
+        background-color:#2a9ecc;
+        color:rgb(0, 0, 0);
+    }
+    
+    h1 {
+        font-family:'Hepta Slab', Helvetica, Arial;
+        text-align: center;
+    }
+    h2 {
+        font-family:'Hepta Slab', Helvetica, Arial;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #23232e;
+        height: 10vh;
+        color: #fff;
+       
+        
+    }
+    
+    .models-area {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .models-item {
+        text-align: center;
+        max-width:250px;
+       
+        font-family:'Hepta Slab', Helvetica, Arial;
+        margin:0 auto 50px auto;
+    }
+    
+    .models-item a {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        text-decoration: none;
+       
+    }
+    
+    .models-item--img {
+        width:200px;
+        height:200px;
+        background-color:#EEE;
+        border-radius:20px;
+        box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
+    }
+    
+    .models-item--img img {
+        width:100%;
+        height:auto;
+        border-radius:20px;
+    }
+    
+    .models-item--add {
+        width:50px;
+        height:50px;
+        line-height:50px;
+        border-radius:25px;
+        background-color:#10bd6c;
+        text-align:center;
+        color:rgb(255, 255, 255);
+        font-size:22px;
+        cursor:pointer;
+        margin-top:-25px;
+        transition:all ease .2s;
+        
+    }
+    
+   
+    
+    .models-item--price {
+        font-size:15px;
+        color:rgb(0, 0, 0);
+        margin-top:5px;
+    }
+    
+    .models-item--name {
+        font-size:20px;
+        font-weight: bold;
+        color:#000;
+        margin-top:5px;
+    }
+    
+    .models-item--desc {
+        font-size:15px;
+        color:rgb(255, 255, 255);
+        margin-top:10px;
+    }
+    
+    .modelsWindowArea {
+        position:fixed;
+        left:0;
+        top:0;
+        bottom:0;
+        right:0;
+        background-color:rgba(0, 0, 0, 0.5);
+        display:none;
+        transition: all ease .5s;
+        justify-content: center;
+        align-items: center;
+        overflow-y:auto;
+    }
+    
+    .modelsWindowBody {
+        width: 800px;
+        background-color:#FFF;
+        border-radius:10px;
+        box-shadow:0px 0px 15px rgb(0, 0, 0);
+        display:flex;
+        margin:20px 0px;
+    }
+    
+    .modelsBig {
+        flex:1;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modelsBig--back {
+        position:absolute;
+        width:30px;
+        height:30px;
+        background-color:#000;
+    }
+    
+    .modelsBig img {
+        height:250px;
+        width:auto;
+    }
+    
+    .modelsInfo {
+        flex:1;
+        font-family:'Hepta Slab', Helvetica, Arial;
+        padding-bottom:50px;
+    }
+    
+    .modelsInfo h1 {
+        margin-top:50px;
+    }
+    
+    .modelsInfo .modelsInfo--desc {
+        font-size:15px;
+        color:rgb(0, 0, 0);
+        margin-top:10px;
+        font-family:'Lato',Helvetica,Arial;
+    }
+    
+    .modelsInfo--sector {
+        color:#CCC;
+        text-transform: uppercase;
+        font-size:14px;
+        margin-top:30px;
+        margin-bottom:10px;
+    }
+    
+    .modelsInfo--sizes {
+        display:inline-flex;
+        border-radius:10px;
+        overflow:hidden;
+    }
+    
+    .modelsInfo--size {
+        padding:10px 15px;
+        color:#000;
+        background-color:#EEE;
+        font-size:13px;
+        font-weight: bold;
+        cursor:pointer;
+    }
+    
+    .modelsInfo--size:hover {
+        background-color:#CCC;
+    }
+    
+    .modelsInfo--size.selected {
+        background-color:#399ade;
+        color:#FFF;
+    }
+    
+    .modelsInfo--size.selected span {
+        color:#D6D6D6;
+    }
+    
+    .modelsInfo--size span {
+        font-size:12px;
+        color:#999;
+        font-weight: normal;
+    }
+    
+    .modelsInfo--price {
+        display:flex;
+        align-items:center;
+    }
+    
+    .modelsInfo--actualPrice {
+        font-size:28px;
+        margin-right:30px;
+    }
+    
+    .modelsInfo--qtarea {
+        display:inline-flex;
+        background-color:#EEE;
+        border-radius:10px;
+        height:30px;
+    }
+    
+    .modelsInfo--qtarea button {
+        border:0;
+        background-color:transparent;
+        font-size:17px;
+        outline:0;
+        cursor:pointer;
+        padding:0px 10px;
+        color:#333;
+    }
+    
+    .modelsInfo--qt {
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0px 5px;
+        color:#000;
+    }
+    
+    .modelsInfo--addButton {
+        margin-top:30px;
+        padding:20px 30px;
+        border-radius:20px;
+        background-color:#48d05f;
+        color:#FFF;
+        display:inline-block;
+        cursor:pointer;
+        margin-right:30px;
+    }
+    
+    .modelsInfo--addButton:hover {
+        background-color:#32a345;
+    }
+    
+    .modelsInfo--cancelButton {
+        display:inline-block;
+        cursor:pointer;
+    }
+    
+    .modelsInfo--cancelMobileButton {
+        display:none;
+        height:40px;
+        text-align:center;
+        line-height: 40px;
+        margin-bottom:30px;
+    }
+    
+    .cart {
+        margin-bottom:20px;
+        width:40px;
+    }
+    
+    .cart--item {
+        display:flex;
+        align-items:center;
+        margin:10px 0;
+    }
+    
+    .cart--item img {
+        width:40px;
+        height:40px;
+        margin-right:20px;
+        align-items: center;
+    }
+    
+    .cart--item-nome {
+        flex:1;
+    }
+    
+    .cart--item--qtarea {
+        display:inline-flex;
+        background-color:#EEE;
+        border-radius:10px;
+        height:30px;
+    }
+    
+    .cart--item--qtarea button {
+        border:0;
+        background-color:transparent;
+        font-size:17px;
+        outline:0;
+        cursor:pointer;
+        padding:0px 10px;
+        color:#333;
+    }
+    
+    .cart--item--qt {
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0px 5px;
+        color:#000;
+    }
+    
+    .cart--totalitem {
+        padding:15px 0;
+        border-top:1px solid #79b9dd;
+        color:#315970;
+        display:flex;
+        justify-content: space-between;
+        font-size:15px;
+    }
+    
+    .cart--totalitem span:first-child {
+        font-weight: bold;
+    }
+    
+    .cart--totalitem.big {
+        font-size:20px;
+        color:#000;
+        font-weight: bold;
+    }
+    
+    .cart--finalizar {
+        padding:20px 30px;
+        border-radius:20px;
+        background-color:#48d05f;
+        color:#FFF;
+        cursor:pointer;
+        text-align:center;
+        margin-top:20px;
+        border:2px solid #63f77c;
+        transition: all ease .2s;
+    }
+    
+    .cart--finalizar:hover {
+        background-color:#035541;
+    }
+    
